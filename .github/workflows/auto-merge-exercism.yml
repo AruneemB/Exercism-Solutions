@@ -7,7 +7,7 @@ on:
 jobs:
   automerge:
     runs-on: ubuntu-latest
-    if: github.actor == 'exercism-solutions-syncer'
+    #if: github.actor == 'exercism-solutions-syncer'
     steps:
       - name: Auto-approve PR
         uses: hmarr/auto-approve-action@v3
