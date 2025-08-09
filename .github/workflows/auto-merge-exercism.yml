@@ -7,7 +7,7 @@ on:
 jobs:
   automerge:
     runs-on: ubuntu-latest
-    #if: github.actor == 'exercism-solutions-syncer'
+    if: github.actor == 'exercism-solutions-syncer'
     steps:
       - name: Auto-approve PR
         uses: hmarr/auto-approve-action@v3
@@ -15,7 +15,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Merge PR
-        uses: peter-evans/merge-pull-request@v3
+        uses: peter-evans/merge-pull-request@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           merge-method: squash
